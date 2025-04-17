@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Optional: Declare permissions only if needed at compile-time -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Android 12 and below -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <!-- Android 13 and above -->
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_IMAGES"
+        tools:ignore="SelectedPhotoAccess" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <application>
+
+        <!-- Only PermissionsActivity is part of your library -->
+        <activity
+            android:name="com.sutirtha.enhanced_permission_checker.PermissionsActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

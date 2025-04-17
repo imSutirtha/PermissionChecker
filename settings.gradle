@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Permission Checker"
 include ':app'
+include ':enhanced_permission_checker'
